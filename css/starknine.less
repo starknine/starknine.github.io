@@ -95,7 +95,7 @@ a,a:visited {
 	}
 }
 
-
+.clearfix {clear:both;}
 i.icon {
 	display:inline-block;
 }
@@ -961,6 +961,8 @@ header {
 // CONTENT: Team
 
 .content-team {
+
+	padding-left:10px;
 	ul {
 		margin:0;
 		width:100%;
@@ -976,6 +978,11 @@ header {
 				width:100%;
 			}
 		}
+	}
+	p {
+		font-size: 14px;
+		line-height: 1.2em;
+		padding: 15px;
 	}
 	@media screen and (max-width: @grid-width-bp4) { 
 		ul {
@@ -1004,31 +1011,117 @@ header {
 
 
 .page-team {
+	margin-top:100px;
+
+	@media screen and (max-width: @grid-width-bp4) {
+		margin-top:62px;
+	}
+		.title {
+			font-size:30px;
+			text-align: center;
+			margin-bottom:15px;
+		}
 		.team-member {
 			position:relative;
 			display:block;
-			border-bottom:5px solid orange;
+			border-bottom:2px solid orange;
+			background-color:white;
+			padding:10px;
+			margin:10px;
+			border-radius:25px;
+			overflow:hidden;
+			margin-bottom:25px;
+		}
+		.background {
+			max-width:100%;
+			overflow:hidden;
+			height:300px;
+			border-radius:15px;
+			vertical-align: bottom;
 		}
 		.photo {
 			max-width:100px;
 			max-height:100px;
 			position:relative;
-			border-radius:15px;
+			border-radius:50px;
 			overflow:hidden;
-			float:left;
+			position:absolute;
+			top:-75px;
+			left:61px;
 			margin:0 15px 15px 0;
+				border:3px solid orange;
 			img {
 				position:relative;
 				width:100%;
 				height:100%;
 			}
 		}
+		.info {
+			padding-top:50px;
+			position:absolute;
+			width:213px;
+			background-color:rgba(255,255,255,.85);
+			border-radius: 15px;
+			padding:10px;
+			margin-right:25px;
+			border:2px solid rgba(255,255,255,.9);
+			top:115px;
+			left:25px;
+			text-align: center;
+			i:before {
+				font-size:35px;
+				text-shadow:2px 2px 5px rgba(0,0,0,.25);
+			}
+			h2 {
+				margin-top:25px;
+			}
+			.social {
+				margin-top:10px;
+			}
+		}
 		.left {
 			float:left;
-			margin-right:25px;
-			border-right: 1px solid #eee;
-			padding-right:25px;
-			min-width:30%;
+			position:relative;
+			width:60%;
+			padding-top:10px;
+			@media screen and (max-width: @grid-width-bp4) {
+				float:none;
+				width:auto;
+			}
+			p {
+				font-size:16px;
+				padding:15px;
+			}
+		}
+		.right {
+			top:15px;
+			float:right;
+			position:relative;
+			width:35%;
+			padding-top:10px;
+			border-left:1px solid #ddd;
+			padding-left:15px;
+			@media screen and (max-width: @grid-width-bp4) {
+				padding-left:15px;
+				padding-top:15px;
+				border-left:none;
+				float:none;
+				border-top:1px solid #ddd;
+				width:auto;
+			}
+			h3 {
+				margin-top:-10px;
+				font-size:15px;
+			}
+
+			ul {
+				margin-bottom:15px;
+				li {
+					margin-top:5px;
+					font-size:14px;
+					font-weight:normal;
+				}
+			}
 		}
 
 }
