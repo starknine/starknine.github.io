@@ -1,12 +1,13 @@
 # Site settings
 baseurl: ""
 url: "http://www.starknine.com"
+title: "StarkNine - Tracking Your Campaigns and Connections"
 
 # Build settings
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-permalink: "/:categories/:title"
+permalink: "/blog/:title"
 relative_permalinks: false
 paginate: 5
 paginate_path: "page/:num"

@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>StarkNine - Tracking Your Campaigns and Connections</title>
-        <meta name="description" content="Tracking Your Campaigns and Connections - Products: TheHound, ChatBlend">
+        <title>{% if page.title %}{{ page.title }} - StarkNine{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}Tracking Your Campaigns and Connections - Products: TheHound, ChatBlend{% endif %}">
         <meta name="viewport" content="width=device-width; initial-scale=1; user-scalable=0;">
         <!---<meta name="viewport" content="width=device-width; initial-scale=1;">-->
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -24,8 +24,8 @@
         <input type="checkbox" class="css-checkbox" id="setting-sg-menu">
         <div class="header-container">
             <header class="clearfix row">
-                <a href="/"><h1 class="title col three logo"><img src="/img/logos/stark9.png"><label class="sg-nav" for="setting-sg-menu"><i class="fa fa-bars"></i></label></h1></a>
-                <nav class="col seven">
+                <a href="/"><h1 class="title col two logo"><img src="/img/logos/stark9.png"><label class="sg-nav" for="setting-sg-menu"><i class="fa fa-bars"></i></label></h1></a>
+                <nav class="col eight">
                     <ul class='row'>
                         <li class="col two"><a class="fa fa-circle-o font-normal-large" href="/#products">Products</a>
                             <ul class="subnav products">
@@ -34,6 +34,7 @@
                             </ul>
                         </li>
                         <li class="col two"><a class="fa fa-users font-normal-large" href="/team/">Our Team</a></li>
+                        <li class="col two"><a class="fa fa-file-text font-normal-large" href="/blog/">Blog</a></li>
                         <li class="col two"><a class="fa fa-comment font-normal-large" href="/#contact">Contact Us</a></li>
                     </ul>
                 </nav>
